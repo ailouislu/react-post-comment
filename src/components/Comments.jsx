@@ -46,7 +46,6 @@ function Comments(props) {
         />
     );
 
-
     const handelBackToPosts = () =>{
         props.history.push('/posts')
     }
@@ -70,56 +69,53 @@ function Comments(props) {
                 <Breadcrumb.Item onClick={handelBackToPosts}>Posts</Breadcrumb.Item>
                 <Breadcrumb.Item active>Comments</Breadcrumb.Item>
             </Breadcrumb>
-            
             <Row>
-            
-            <Col sm={3}>
-            </Col>
-            <Col sm={9}>
-                <div className="post_title">
-                    <h5 className="post_textStyles">
-                        <strong>Post: </strong>
-                        <label className="post_textStyles">{post.title}</label>
-                    </h5>
-                    <label className="post_body post_textStyles">
-                        {post.body}
-                    </label>
-                    <label className="post_userId">
-                        <strong>UserId: </strong>
-                        {post.userId}
-                    </label>
-                </div>
-                
-                <div>
-                    <p className="totalCount"><strong>Showing {totalCount} comments about this post:</strong></p>
-                </div>
-                <ColoredLine color="black" />
-                <div>
-                        {
-                            comments.map((cont, index) =>{
-                            return (
-                                <div key={cont.id} className="comment">
-                                    <div className="comment_email">
-                                        <strong>Email: </strong>
-                                        <label className="comment_textStyles">{cont.email}</label>
+                <Col sm={3}>
+                </Col>
+                <Col sm={9}>
+                    <div className="post_title">
+                        <h5 className="post_textStyles">
+                            <strong>Post: </strong>
+                            <label className="post_textStyles">{post.title}</label>
+                        </h5>
+                        <label className="post_body post_textStyles">
+                            {post.body}
+                        </label>
+                        <label className="post_userId">
+                            <strong>UserId: </strong>
+                            {post.userId}
+                        </label>
+                    </div>
+                    <div>
+                        <p className="totalCount"><strong>Showing {totalCount} comments about this post:</strong></p>
+                    </div>
+                    <ColoredLine color="black" />
+                    <div>
+                            {
+                                comments.map((cont, index) =>{
+                                return (
+                                    <div key={cont.id} className="comment">
+                                        <div className="comment_email">
+                                            <strong>Email: </strong>
+                                            <label className="comment_textStyles">{cont.email}</label>
+                                        </div>
+                                        <h5>
+                                            <div className="comment_title comment_textStyles">{cont.name}</div>
+                                        </h5>
+                                        <label>
+                                            <div className="comment_body comment_textStyles">{cont.body}</div>
+                                        </label>
+                                        <ColoredLine color="black" />
                                     </div>
-                                    <h5>
-                                        <div className="comment_title comment_textStyles">{cont.name}</div>
-                                    </h5>
-                                    <label>
-                                        <div className="comment_body comment_textStyles">{cont.body}</div>
-                                    </label>
-                                    <ColoredLine color="black" />
-                                </div>
-                            )})
-                        }
-                </div>
-                <div className="comment_button">
-                    <Button variant="primary" onClick={handelBackToPosts}>Back</Button>{''}
-                </div>
-            </Col>
-        </Row>
-    </div>
+                                )})
+                            }
+                    </div>
+                    <div className="comment_button">
+                        <Button variant="primary" onClick={handelBackToPosts}>Back</Button>{''}
+                    </div>
+                </Col>
+            </Row>
+        </div>
     )
 }
 

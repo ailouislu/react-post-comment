@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import _ from "lodash";
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Pagination from "./common/Pagination";
@@ -44,7 +43,6 @@ class Posts extends Component {
   handleSort = sortColumn => {
     this.setState({ sortColumn });
   };
-
 
   getPagedData = () => {
     const {
