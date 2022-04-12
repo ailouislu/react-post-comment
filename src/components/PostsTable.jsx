@@ -7,7 +7,7 @@ class PostsTable extends Component {
     {
       path: "title",
       label: "Title",
-      content: post => <Link to={`/comment/${post.id}`}>{post.title}</Link>
+      content: post => <Link to={`/comments/${post.id}`}>{post.title}</Link>
     },
     { path: "userId", label: "UserId" },
     { path: "body", label: "Content" },

@@ -1,15 +1,15 @@
 .totalCount {
-    margin-top: 20px;
+    margin-top: 1rem;
 }
 
 .newPost-search {
     display: flex;
 	justify-content: space-between;
     vertical-align: middle;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 .newPost {
     position: relative;
-    margin-top: 15px;
+    margin-top: 1rem;
 }

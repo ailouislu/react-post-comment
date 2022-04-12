@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
 import _ from "lodash";
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Pagination from "./common/Pagination";
 import Spinner from "./common/Spinner";
 import PostsTable from "./PostsTable";
 import SearchBox from "./SearchBox";
-import { getPosts, savePost, deletePost } from "../services/postsService";
+import { getPosts } from "../services/postsService";
 import { paginate } from "../utils/paginate";
 import  "../css/posts.css";
 
@@ -82,7 +81,7 @@ class Posts extends Component {
     const { length: count } = this.state.posts;
     const { pageSize, currentPage, sortColumn, searchQuery } = this.state;
 
-    if (count === 0) return <p>There are no posts in the database.</p>;
+    if (count === 0) return <p>There are no posts in the database</p>;
     const { totalCount, data: posts } = this.getPagedData();
 
     return (
@@ -92,7 +91,7 @@ class Posts extends Component {
         </Breadcrumb>
         <div className="row">
           <div className="col-sm-12">
-            <p className="totalCount">Showing {totalCount} posts in the database.</p>
+            <p className="totalCount">Showing {totalCount} posts in the database</p>
             <div className="row newPost-search">
                 <div className="search">
                     <SearchBox value={searchQuery} onChange={this.handleSearch} />

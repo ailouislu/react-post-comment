@@ -24,7 +24,6 @@ const NavBar = () => {
       </Navbar.Brand>
       <Nav className="me-auto">
         <Nav.Link href="/posts">Posts</Nav.Link>
-        <Nav.Link href="/comments">Comments</Nav.Link>
       </Nav>
       </Container>
     </Navbar>
