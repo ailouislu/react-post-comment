@@ -8,6 +8,8 @@ This is an online commenting system, implemented using react and react-bootstrap
 
 ## Getting started
 
+You can view a live demo over at http://nzlouis.com:3000
+
 To get the frontend running locally:
 
 - Clone this repo
