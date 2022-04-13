@@ -20,17 +20,9 @@ class Posts extends Component {
   };
 
   async componentDidMount() {
-    const { data: posts } = await getPosts()
-                            .then((response) =>response);
+    const { data: posts } = await getPosts();
     this.setState({ posts, isLoading: false });
   }
-
-  handleLike = post => {
-    const posts = [...this.state.posts];
-    const index = posts.indexOf(post);
-    posts[index] = { ...posts[index] };
-    this.setState({ posts });
-  };
 
   handlePageChange = page => {
     this.setState({ currentPage: page });
