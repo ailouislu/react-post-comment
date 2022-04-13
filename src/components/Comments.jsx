@@ -93,8 +93,7 @@ class Comments extends Component {
                                 }
                         </div>
                         <div className="comment_button">
-                            {/* <button data-testid="comment_button" onClick={handelBackToPosts}>Back</button> */}
-                            <Button data-testid="comment_button" className="comment_button" variant="primary" onClick={this.handelBackToPosts}>Back</Button>{''}
+                            <Button className="comment_button" variant="primary" onClick={this.handelBackToPosts}>Back</Button>{''}
                         </div>
                     </Col>
                 </Row>
