@@ -7,7 +7,6 @@ import Button from 'react-bootstrap/Button'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import { getPost } from "../services/postsService";
 import { getComments } from "../services/commentsService";
-import { createMemoryHistory } from 'history';
 import  "../css/comments.css";
 
 class Comments extends Component {
@@ -26,8 +25,7 @@ class Comments extends Component {
     }
 
     handelBackToPosts = () =>{
-        const history = createMemoryHistory();
-        history.push('/posts');
+        this.props.history.push('/posts');
     }
 
     render() {
