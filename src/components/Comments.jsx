@@ -58,13 +58,13 @@ class Comments extends Component {
                                 <strong>Post: </strong>
                                 <label className="post_textStyles">{this.state.post.title}</label>
                             </h5>
-                            <label className="post_body post_textStyles">
+                            <p className="post_body post_textStyles">
                                 {this.state.post.body}
-                            </label>
-                            <label className="post_userId">
+                            </p>
+                            <p className="post_userId">
                                 <strong>UserId: </strong>
                                 {this.state.post.userId}
-                            </label>
+                            </p>
                         </div>
                         <div>
                             <p className="totalCount"><strong>Showing {this.state.totalCount} comments about this post:</strong></p>
