@@ -25,7 +25,7 @@ class Comments extends Component {
     }
 
     handelBackToPosts = () =>{
-        this.props.history.push("/posts");
+        window.history.back(-1);
     }
 
     render() {

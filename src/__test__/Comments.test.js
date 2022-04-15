@@ -35,6 +35,13 @@ it("calls componentDidMount", () => {
   componentDidMountSpy.mockRestore();
 });
 
+it("calls component handelBackToPosts test", () => {
+  const { wrapper } = setup();
+  const spyFunction = jest.spyOn(wrapper.instance(), "handelBackToPosts");
+  wrapper.instance().handelBackToPosts();
+  expect(spyFunction).toHaveBeenCalled();
+  spyFunction.mockRestore();
+});
 
 
 
