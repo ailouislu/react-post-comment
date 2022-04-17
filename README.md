@@ -2,7 +2,7 @@
 
 This is an online commenting system, implemented using react and react-bootstrap. Contains functions such as posts and comments. The system uses many reusable components to improve the reusability of the project.
 
-You can view a live demo over at http://nzlouis.com:3000
+You can view a live demo over at http://comments.nzlouis.com
 
 ![image](src/images/posts.jpg)
 
