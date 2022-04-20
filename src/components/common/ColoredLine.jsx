@@ -1,12 +1,14 @@
 import React from 'react'
 
 function ColoredLine(props) {
+    const color = props.color === undefined ? "black" : props.color;
+    const height = props.height === undefined ? 1 : Number(props.height);
     return (
             <hr
                 style={{
-                    color: props.color,
+                    color: color,
                     backgroundColor: props.color,
-                    height: 1
+                    height: height
                 }}
             />
     )
